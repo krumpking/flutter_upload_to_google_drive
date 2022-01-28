@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "579862714098",
+    "project_id": "mindful-rhythm-339522",
+    "storage_bucket": "mindful-rhythm-339522.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:579862714098:android:44b3aabd70bf0bd21fe26b",
+        "android_client_info": {
+          "package_name": "com.example.upload_to_google_drive"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "579862714098-vatel2a23ag3vuc50b54hp0388udbl4c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDsU0re5yZEvv2FQSjEl83uuWG4iiQACjQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "579862714098-vatel2a23ag3vuc50b54hp0388udbl4c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

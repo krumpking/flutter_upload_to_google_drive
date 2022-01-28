@@ -4,13 +4,51 @@ A new Flutter project.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+This project is about uploading a file to Google Drive 
 
-A few resources to get you started if this is your first Flutter project:
+First of all, create a project in Google Cloud Platform.
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+Click Create Credentials and OAuth client ID
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Select Android and input necessary information.
+
+The package name must be the same as the value specified to package in android\app\src\main\AndroidManifest.xml.
+
+Enter the SHA-1 , I will send it to you    , created by running in 
+keytool -list -v -keystore ~/.android/debug.keystore -alias androiddebugkey -storepass android -keypass android 
+for Linux&Mac 
+./gradlew signingReport should work in Android 
+
+Download google-services.json and place it to android\app\google-services.json.
+
+Select Scopes
+
+ Go to API Library page
+
+Then, click Google Drive API
+
+Click the ENABLE button here.
+
+Once it’s enabled and the scopes page is reloaded, the new items are shown.
+
+Add test users, (or maybe publish it in our case)
+
+Create Firebase Project
+
+Add 4 dependencies into pubspec.yaml file.
+
+ googleapis: ^7.0.0
+  google_sign_in: ^5.2.1
+  firebase_auth:
+  firebase_core:
+
+Add classpath 'com.google.gms:google-services:4.3.10'  in dependencies android\build.gradle
+
+Add apply plugin: 'com.google.gms.google-services'  in android\app\build.gradle
+
+Ensure minSdk is 20(though 19 would , 20 is safer)
+
+Add implementation 'com.google.firebase:firebase-analytics' in android\app\build.gradle 
+
+
+
